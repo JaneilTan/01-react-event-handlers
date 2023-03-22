@@ -6,7 +6,11 @@ import Products from "./components/Products";
 
 const setFilterBy = (filterBy) => {
   alert (`Filter By: ${filterBy}`);
-}
+};
+
+const setSortBy = (sortBy) => {
+  alert(`Sort by: ${sortBy}`);
+};
 
 const App = () => {
   const products = getProducts();
@@ -16,7 +20,7 @@ const App = () => {
       <h1>Sunglass Shop</h1>
       <div className="toolbar">
         <FilterBy setFilterBy={setFilterBy} />
-        <SortBy />
+        <SortBy setSortBy={setSortBy} />
       </div>
       <Products products={products} />
     </div>
